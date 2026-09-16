@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your coins - AkaFun</title>
+  <meta name="description" content="Every coin you have launched on AkaFun, with its price, RWA holder rewards and trading activity on Arc." />
+  <meta name="keywords" content="aka.fun,AkaFun,RWA,meme token launchpad,Arc,token launcher,Uniswap v4,USDC,DEX,DeFi,staking,crypto trading" />
+  
+  <!-- OpenGraph -->
+  <meta property="og:title" content="aka.fun — Launch. Trade. Build Markets." />
+  <meta property="og:description" content="An Arc-native launchpad powered by USDC and Uniswap v4, connecting crypto-native markets with real-world assets." />
+  <meta property="og:url" content="https://aka.fun/" />
+  <meta property="og:site_name" content="aka.fun" />
+  <meta property="og:image" content="./images/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:type" content="website" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="aka.fun — Launch. Trade. Build Markets." />
+  <meta name="twitter:description" content="An Arc-native launchpad powered by USDC and Uniswap v4, connecting crypto-native markets with real-world assets." />
+  <meta name="twitter:image" content="./images/og-image.png" />
+
+  <link rel="icon" href="./images/favicon.ico" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <div class="app-layout" id="app-root">
+    <!-- Mobile Backdrop -->
+    <div id="sidebar-backdrop" class="sidebar-backdrop" aria-hidden="true"></div>
+
+    <!-- Aside Sidebar Navigation -->
+    <aside id="main-sidebar" class="sidebar" aria-label="Sidebar navigation">
+      <!-- Logo & Wordmark -->
+      <a class="brand-link" href="#" aria-label="aka.fun Home">
+        <img class="brand-logo-img logo-light" src="./images/logo.svg" alt="AkaFun logo" width="34" height="34" />
+        <img class="brand-logo-img logo-dark" src="./images/logo-dark.svg" alt="AkaFun logo" width="34" height="34" />
+        <span class="wordmark">
+          <span class="wordmark-aka">aka</span>
+          <span class="wordmark-dot"></span>
+          <span class="wordmark-fun">fun</span>
+        </span>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="sidebar-nav">
+        <!-- Explore -->
+        <a class="nav-item" href="#explore" title="Explore">
+          <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m21 21-4.34-4.34"></path>
+            <circle cx="11" cy="11" r="8"></circle>
+          </svg>
+          <span class="nav-text">Explore</span>
+        </a>
+
+        <!-- Launch -->
+        <a class="nav-item" href="#launch" title="Launch">
+          <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path>
+            <path d="M20 2v4"></path>
+            <path d="M22 4h-4"></path>
+            <circle cx="4" cy="20" r="2"></circle>
+          </svg>
+          <span class="nav-text">Launch</span>
+        </a>
+
+        <!-- Portfolio (Active) -->
+        <a class="nav-item active" href="#profile" title="Portfolio">
+          <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            <rect width="20" height="14" x="2" y="6" rx="2"></rect>
+          </svg>
+          <span class="nav-text">Portfolio</span>
+        </a>
+
+        <!-- Referrals -->
+        <a class="nav-item" href="#referrals" title="Referrals">
+          <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+            <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+          </svg>
+          <span class="nav-text">Referrals</span>
+        </a>
+
+        <!-- Stats -->
+        <a class="nav-item" href="#stats" title="Stats">
+          <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
+            <path d="M18 17V9"></path>
+            <path d="M13 17V5"></path>
+            <path d="M8 17v-3"></path>
+          </svg>
+          <span class="nav-text">Stats</span>
+        </a>
+
+        <!-- How it works -->
+        <a class="nav-item" href="#how-it-works" title="How it works">
+          <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 7v14"></path>
+            <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path>
+          </svg>
+          <span class="nav-text">How it works</span>
+        </a>
+
+        <!-- Integration -->
+        <a class="nav-item" href="#integration" title="Integration">
+          <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m16 18 6-6-6-6"></path>
+            <path d="m8 6-6 6 6 6"></path>
+          </svg>
+          <span class="nav-text">Integration</span>
+        </a>
+      </nav>
+
+      <!-- Sidebar Footer (Socials & Collapse) -->
+      <div class="sidebar-footer">
+        <div class="social-links">
+          <!-- X (Twitter) -->
+          <a class="social-btn" href="https://x.com/akadotfun" target="_blank" rel="noopener noreferrer" aria-label="X" title="X">
+            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+              <path fill="currentColor" d="m26.37 26-8.795-12.822.015.012L25.52 4h-2.65l-6.46 7.48L11.28 4H4.33l8.211 11.971-.001-.001L3.88 26h2.65l7.182-8.322L19.42 26zM10.23 6l12.34 18h-2.1L8.12 6z"></path>
+            </svg>
+          </a>
+          <!-- Telegram -->
+          <a class="social-btn" href="https://t.me/akadotfun" target="_blank" rel="noopener noreferrer" aria-label="Telegram" title="Telegram">
+            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
+              <path d="m446.7 98.6-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2"></path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="sidebar-collapse-wrapper">
+          <button id="sidebar-collapse-btn" class="collapse-btn" type="button" aria-label="Collapse sidebar">
+            <svg class="collapse-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m15 18-6-6 6-6"></path>
+            </svg>
+            <span class="collapse-text">Collapse</span>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main View Content Area -->
+    <div class="content-wrapper">
+      <!-- Top Navigation Header -->
+      <header class="top-header" role="banner">
+        <!-- Mobile hamburger menu button -->
+        <button id="mobile-menu-btn" class="mobile-menu-btn" type="button" aria-label="Open menu">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+        </button>
+
+        <!-- Right Header Action Controls -->
+        <div class="header-actions">
+          <!-- Launch a token CTA -->
+          <button id="launch-token-btn" class="btn-launch" type="button">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m5 12 7-7 7 7"></path>
+              <path d="M12 19V5"></path>
+            </svg>
+            <span class="label-mobile">Launch</span>
+            <span class="label-desktop">Launch a token</span>
+          </button>
+
+          <!-- Arc network badge -->
+          <div class="arc-badge">
+            <img class="arc-badge-icon" src="./images/arc.svg" alt="Arc Token" width="14" height="14" />
+            <span class="arc-badge-text">Arc</span>
+          </div>
+
+          <!-- Add Arc network button -->
+          <button id="add-arc-btn" class="btn-add-arc" type="button">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14"></path>
+              <path d="M12 5v14"></path>
+            </svg>
+            <span>Add Arc</span>
+          </button>
+
+          <!-- Theme toggle button (Light / Dark) -->
+          <button id="theme-toggle-btn" class="btn-theme-toggle" type="button" aria-label="Toggle theme">
+            <!-- Moon icon (for light mode) -->
+            <svg class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+            <!-- Sun icon (for dark mode) -->
+            <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+          </button>
+
+          <!-- Connect Wallet Button -->
+          <button id="header-connect-wallet-btn" class="btn-connect-wallet" type="button">
+            Connect Wallet
+          </button>
+        </div>
+      </header>
+
+      <!-- Main Profile Page Container -->
+      <main class="main-content" role="main">
+        <div class="page-container">
+          <!-- Central Hero Card (Empty State) -->
+          <section id="portfolio-hero-card" class="portfolio-card">
+            <h1 class="portfolio-title">Your portfolio lives with your wallet</h1>
+            <p class="portfolio-desc">
+              Connect to see the tokens you launched, what they are worth and your balances.
+            </p>
+            <div class="portfolio-btn-wrapper">
+              <button id="hero-connect-wallet-btn" class="btn-connect-wallet" type="button">
+                Claim RWA rewards
+              </button>
+              <button id="hero-migrate-btn" class="btn-migrate btn-migrate-hero" type="button" title="Migrate tokens to Arc">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="m16 3 4 4-4 4"></path>
+                  <path d="M20 7H4"></path>
+                  <path d="m8 21-4-4 4-4"></path>
+                  <path d="M4 17h16"></path>
+                </svg>
+                <span>NFT Dashboard</span>
+              </button>
+            </div>
+          </section>
+
+          <!-- Reward Active Feature Card (Inserted Below White Box) -->
+          <section class="reward-section-wrapper" aria-label="Reward Active Overview">
+            <div class="reward-active-card">
+              <!-- Eyebrow & Status Badge -->
+              <div class="reward-card-header">
+                <div class="reward-card-eyebrow">
+                  <span>03</span>
+                  <span>·</span>
+                  <span>REWARD ACTIVE</span>
+                </div>
+                <div class="reward-card-badge">
+                  COMMITTED
+                </div>
+              </div>
+
+              <!-- Main Title -->
+              <h2 class="reward-card-title">Keep the NFT. Activate rewards.</h2>
+
+              <!-- Status Boxes Row -->
+              <div class="reward-boxes-row">
+                <!-- NFT Box -->
+                <div class="reward-box reward-box-nft">
+                  <span class="reward-box-label">NFT</span>
+                  <div class="reward-box-val reward-box-val-nft">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--foreground);">
+                      <path d="M20 6 9 17l-5-5"></path>
+                    </svg>
+                    <span>Yours</span>
+                  </div>
+                </div>
+
+                <!-- Plus Symbol -->
+                <div class="reward-plus-operator" aria-hidden="true">+</div>
+
+                <!-- RWA Rewards Box -->
+                <div class="reward-box reward-box-rwa">
+                  <span class="reward-box-label">RWA REWARDS</span>
+                  <div class="reward-box-val reward-box-val-rwa">
+                    Active
+                  </div>
+                </div>
+              </div>
+
+              <!-- Descriptive Subtext -->
+              <p class="reward-card-desc">
+                The NFT remains yours and enters the reward-active state.
+              </p>
+            </div>
+          </section>
+
+          <!-- Connected Portfolio View (Displayed upon wallet connection) -->
+          <section id="connected-portfolio-section" class="connected-profile-section">
+            <div class="portfolio-card" style="text-align: left; align-items: flex-start;">
+              <div style="display:flex; justify-content:space-between; align-items:center; width:100%; flex-wrap:wrap; gap:12px; border-bottom:1px solid var(--border); padding-bottom:16px;">
+                <div>
+                  <div style="font-size:12px; font-weight:600; text-transform:uppercase; color:var(--sub); letter-spacing:0.05em;">Connected Wallet</div>
+                  <div id="connected-wallet-address" style="font-size:18px; font-weight:700; font-family:var(--font-mono); color:var(--foreground); margin-top:4px;">0x...</div>
+                </div>
+                <button id="disconnect-wallet-btn" class="btn-theme-toggle" style="width:auto; padding:0 12px; height:32px; font-size:12px; font-weight:600; color:var(--sub);" type="button">
+                  Disconnect
+                </button>
+              </div>
+
+              <!-- Profile Stats Grid -->
+              <div class="profile-stats-grid">
+                <div class="stat-box">
+                  <div class="stat-label">Total Portfolio Value</div>
+                  <div class="stat-value">$1,850.40</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-label">ARC Balance</div>
+                  <div class="stat-value">1,450.00 ARC</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-label">USDC Balance</div>
+                  <div class="stat-value">$400.40</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-label">Launched Tokens</div>
+                  <div class="stat-value">0</div>
+                </div>
+              </div>
+
+              <div style="margin-top:32px; width:100%;">
+                <h2 style="font-size:15px; font-weight:700; color:var(--foreground); margin-bottom:12px;">Launched Coins</h2>
+                <div style="border:1px dashed var(--border); padding:32px 16px; text-align:center; color:var(--sub); font-size:13px;">
+                  You haven't launched any tokens on Arc yet. Click <strong style="color:var(--foreground);">"Launch a token"</strong> above to get started!
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Modal: Connect Wallet -->
+  <div id="wallet-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="wallet-modal-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="wallet-modal-title" class="modal-title">Connect a Wallet</h3>
+        <button id="close-wallet-modal-btn" class="modal-close-btn" type="button" aria-label="Close modal">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M18 6 6 18M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="wallet-options-list">
+          <!-- MetaMask -->
+          <div class="wallet-option-item" data-wallet="MetaMask">
+            <div class="wallet-info">
+              <div class="wallet-icon" style="background:#f6851b18;">
+                <svg width="20" height="20" viewBox="0 0 32 32" fill="none"><path d="M29.6 16.3 26 5.8l-12.7 4.1L2.4 16.3l3.5 6.6L16 28.5l10.1-5.6z" fill="#E2761B"/><path d="m2.4 16.3 10.9-6.4 1.3 5.4-8.7 7.6z" fill="#E4761B"/><path d="m29.6 16.3-3.5 6.6-8.7-7.6 1.3-5.4z" fill="#E4761B"/><path d="m8.7 18.2 4.6-2.9-4.8-1.5z" fill="#D7C1B3"/><path d="m23.3 18.2.2-4.4-4.8 1.5z" fill="#D7C1B3"/><path d="m16 28.5-7.3-5.6 2.5-1.7 4.8 7.3z" fill="#233447"/><path d="m16 28.5 7.3-5.6-2.5-1.7-4.8 7.3z" fill="#233447"/></svg>
+              </div>
+              <span class="wallet-name">MetaMask</span>
+            </div>
+            <span class="wallet-badge">Popular</span>
+          </div>
+
+          <!-- Arc Wallet -->
+          <div class="wallet-option-item" data-wallet="Arc Wallet">
+            <div class="wallet-info">
+              <div class="wallet-icon" style="background:#1b315820;">
+                <img src="./images/arc.svg" alt="Arc" width="20" height="20" />
+              </div>
+              <span class="wallet-name">Arc Wallet</span>
+            </div>
+            <span class="wallet-badge">Native</span>
+          </div>
+
+          <!-- Coinbase Wallet -->
+          <div class="wallet-option-item" data-wallet="Coinbase Wallet">
+            <div class="wallet-info">
+              <div class="wallet-icon" style="background:#0052ff18;">
+                <svg width="20" height="20" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" fill="#0052FF"/><rect x="11" y="11" width="10" height="10" rx="2" fill="#fff"/></svg>
+              </div>
+              <span class="wallet-name">Coinbase Wallet</span>
+            </div>
+          </div>
+
+          <!-- WalletConnect -->
+          <div class="wallet-option-item" data-wallet="WalletConnect">
+            <div class="wallet-info">
+              <div class="wallet-icon" style="background:#3b99fc18;">
+                <svg width="20" height="20" viewBox="0 0 32 32" fill="none"><path d="M7 12c5-5 13-5 18 0l.6.6c.3.3.3.7 0 1l-2 2c-.3.3-.7.3-1 0l-.8-.8c-3.2-3.2-8.4-3.2-11.6 0l-.9.9c-.3.3-.7.3-1 0l-2-2c-.3-.3-.3-.7 0-1L7 12zm18 5 1.8 1.8c.3.3.3.7 0 1l-5 5c-.3.3-.7.3-1 0l-3.6-3.6c-.1-.1-.3-.1-.4 0L13.2 25c-.3.3-.7.3-1 0l-5-5c-.3-.3-.3-.7 0-1L9 17c.3-.3.7-.3 1 0l3.6 3.6c.1.1.3.1.4 0l3.6-3.6c.3-.3.7-.3 1 0l3.6 3.6c.1.1.3.1.4 0l2.4-2.4c.3-.3.7-.3 1 0z" fill="#3B99FC"/></svg>
+              </div>
+              <span class="wallet-name">WalletConnect</span>
+            </div>
+          </div>
+
+          <!-- Rainbow -->
+          <div class="wallet-option-item" data-wallet="Rainbow">
+            <div class="wallet-info">
+              <div class="wallet-icon" style="background:#001d6718;">
+                <svg width="20" height="20" viewBox="0 0 32 32" fill="none"><path d="M6 24c0-5.5 4.5-10 10-10s10 4.5 10 10" stroke="#001D67" stroke-width="3" stroke-linecap="round"/><path d="M10 24c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#D3951D" stroke-width="3" stroke-linecap="round"/></svg>
+              </div>
+              <span class="wallet-name">Rainbow</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Add Arc Network -->
+  <div id="network-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="network-modal-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="network-modal-title" class="modal-title">Add Arc Network</h3>
+        <button id="close-network-modal-btn" class="modal-close-btn" type="button" aria-label="Close modal">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M18 6 6 18M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="network-info-table">
+          <tbody>
+            <tr>
+              <td>Network Name</td>
+              <td>Arc Mainnet</td>
+            </tr>
+            <tr>
+              <td>RPC URL</td>
+              <td>https://rpc.arc.fun</td>
+            </tr>
+            <tr>
+              <td>Chain ID</td>
+              <td>1337</td>
+            </tr>
+            <tr>
+              <td>Currency Symbol</td>
+              <td>ARC</td>
+            </tr>
+            <tr>
+              <td>Block Explorer</td>
+              <td>https://scan.arc.fun</td>
+            </tr>
+          </tbody>
+        </table>
+        <button id="confirm-add-network-btn" class="btn-primary-action" type="button">
+          Add Network to Wallet
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Launch a Token -->
+  <div id="launch-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="launch-modal-title">
+    <div class="modal-card" style="max-width: 480px;">
+      <div class="modal-header">
+        <h3 id="launch-modal-title" class="modal-title">Launch a Token on Arc</h3>
+        <button id="close-launch-modal-btn" class="modal-close-btn" type="button" aria-label="Close modal">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M18 6 6 18M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="create-token-form">
+          <div style="margin-bottom:12px;">
+            <label style="display:block; font-size:12px; font-weight:600; margin-bottom:4px; color:var(--foreground);">Token Name</label>
+            <input type="text" placeholder="e.g. Arc Fun Coin" required style="width:100%; height:34px; padding:0 10px; border:1px solid var(--border); background:var(--background); color:var(--foreground); font-family:inherit; font-size:13px; outline:none;" />
+          </div>
+          <div style="margin-bottom:12px;">
+            <label style="display:block; font-size:12px; font-weight:600; margin-bottom:4px; color:var(--foreground);">Token Symbol / Ticker</label>
+            <input type="text" placeholder="e.g. AFC" required style="width:100%; height:34px; padding:0 10px; border:1px solid var(--border); background:var(--background); color:var(--foreground); font-family:inherit; font-size:13px; outline:none;" />
+          </div>
+          <div style="margin-bottom:16px;">
+            <label style="display:block; font-size:12px; font-weight:600; margin-bottom:4px; color:var(--foreground);">Description</label>
+            <textarea placeholder="Describe your coin and RWA connection..." rows="3" style="width:100%; padding:8px 10px; border:1px solid var(--border); background:var(--background); color:var(--foreground); font-family:inherit; font-size:13px; outline:none; resize:none;"></textarea>
+          </div>
+          <button class="btn-primary-action" type="submit" style="background-color:var(--cta); color:var(--on-cta);">
+            Launch Coin Now
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Migrate Tokens -->
+  <div id="migrate-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="migrate-modal-title">
+    <div class="modal-card" style="max-width: 480px;">
+      <div class="modal-header">
+        <h3 id="migrate-modal-title" class="modal-title">Migrate to Arc</h3>
+        <button id="close-migrate-modal-btn" class="modal-close-btn" type="button" aria-label="Close modal">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M18 6 6 18M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size:13px; color:var(--sub); margin-bottom:16px; line-height:1.5;">
+          Migrate your tokens and liquidity seamlessly to Arc's Uniswap v4 launchpad.
+        </p>
+        <form id="migrate-token-form">
+          <div style="margin-bottom:12px;">
+            <label style="display:block; font-size:12px; font-weight:600; margin-bottom:4px; color:var(--foreground);">Origin Network</label>
+            <select style="width:100%; height:34px; padding:0 10px; border:1px solid var(--border); background:var(--background); color:var(--foreground); font-family:inherit; font-size:13px; outline:none;">
+              <option value="ethereum">Ethereum Mainnet</option>
+              <option value="base">Base</option>
+              <option value="solana">Solana</option>
+              <option value="arbitrum">Arbitrum One</option>
+            </select>
+          </div>
+          <div style="margin-bottom:12px;">
+            <label style="display:block; font-size:12px; font-weight:600; margin-bottom:4px; color:var(--foreground);">Token Contract Address / Symbol</label>
+            <input type="text" placeholder="0x... or token ticker" required style="width:100%; height:34px; padding:0 10px; border:1px solid var(--border); background:var(--background); color:var(--foreground); font-family:inherit; font-size:13px; outline:none;" />
+          </div>
+          <div style="margin-bottom:12px;">
+            <label style="display:block; font-size:12px; font-weight:600; margin-bottom:4px; color:var(--foreground);">Amount to Migrate</label>
+            <div style="display:flex; gap:6px;">
+              <input type="number" step="any" placeholder="0.0" required style="flex:1; height:34px; padding:0 10px; border:1px solid var(--border); background:var(--background); color:var(--foreground); font-family:inherit; font-size:13px; outline:none;" />
+              <button type="button" class="btn-migrate" style="font-size:11px; padding:0 10px; height:34px;">MAX</button>
+            </div>
+          </div>
+          <div style="margin-bottom:16px; border:1px solid var(--border); padding:10px 12px; font-size:12px; background:var(--background);">
+            <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+              <span style="color:var(--sub);">Destination:</span>
+              <span style="font-weight:600; color:var(--foreground);">Arc Mainnet (Uniswap v4)</span>
+            </div>
+            <div style="display:flex; justify-content:space-between;">
+              <span style="color:var(--sub);">Bridge Fee:</span>
+              <span style="font-weight:600; color:var(--foreground);">0.00 ARC (Sponsored)</span>
+            </div>
+          </div>
+          <button class="btn-primary-action" type="submit">
+            Start Migration
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vanilla JavaScript -->
+  <script src="./js/script.js"></script>
+</body>
+</html>

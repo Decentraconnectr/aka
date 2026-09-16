@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 480" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&amp;family=JetBrains+Mono:wght@600;700&amp;display=swap');
+      .canvas-bg { fill: #f6f3ea; }
+      .card-bg { fill: #ffffff; stroke: #e4e8f0; stroke-width: 1.5; }
+      .accent-bar { fill: #d99d18; }
+      .mono-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 600; fill: #686e7d; letter-spacing: 0.12em; }
+      .badge-bg { fill: #d99d18; }
+      .badge-text { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 800; fill: #000000; letter-spacing: 0.12em; }
+      .card-title { font-family: 'Archivo', -apple-system, sans-serif; font-size: 28px; font-weight: 800; fill: #0b0f1a; letter-spacing: -0.02em; }
+      .box-left { fill: #f6f3ea; stroke: #e4e8f0; stroke-width: 1.5; }
+      .box-right { fill: #ffffff; stroke: #d99d18; stroke-width: 1.8; }
+      .box-label { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600; fill: #686e7d; letter-spacing: 0.08em; }
+      .box-val-left { font-family: 'Archivo', -apple-system, sans-serif; font-size: 20px; font-weight: 800; fill: #0b0f1a; }
+      .plus-symbol { font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700; fill: #98a2b8; text-anchor: middle; }
+      .box-val-right { font-family: 'Archivo', -apple-system, sans-serif; font-size: 20px; font-weight: 800; fill: #b98510; }
+      .card-desc { font-family: 'Archivo', -apple-system, sans-serif; font-size: 17px; font-weight: 500; fill: #0b0f1a; }
+    </style>
+  </defs>
+
+  <!-- Marble Canvas Background -->
+  <rect width="920" height="480" class="canvas-bg" />
+
+  <!-- Main White Card -->
+  <g transform="translate(30, 24)">
+    <rect width="860" height="432" class="card-bg" />
+    
+    <!-- Amber Accent Stripe on Left -->
+    <rect x="0" y="0" width="6" height="432" class="accent-bar" />
+
+    <!-- Eyebrow: 03 · REWARD ACTIVE -->
+    <text x="44" y="62" class="mono-eyebrow">03 &nbsp;·&nbsp; REWARD ACTIVE</text>
+
+    <!-- Badge: COMMITTED -->
+    <rect x="670" y="38" width="146" height="36" class="badge-bg" />
+    <text x="743" y="61" class="badge-text" text-anchor="middle">COMMITTED</text>
+
+    <!-- Main Heading -->
+    <text x="44" y="132" class="card-title">Keep the NFT. Activate rewards.</text>
+
+    <!-- Status Boxes Section -->
+    <!-- Left Box: NFT / ✓ Yours -->
+    <rect x="44" y="174" width="340" height="114" class="box-left" />
+    <text x="74" y="214" class="box-label">NFT</text>
+    <path d="M 74 246 L 82 254 L 98 238" fill="none" stroke="#0b0f1a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="108" y="254" class="box-val-left">Yours</text>
+
+    <!-- Plus sign -->
+    <text x="414" y="238" class="plus-symbol">+</text>
+
+    <!-- Right Box: RWA REWARDS / Active -->
+    <rect x="444" y="174" width="340" height="114" class="box-right" />
+    <text x="474" y="214" class="box-label">RWA REWARDS</text>
+    <text x="474" y="254" class="box-val-right">Active</text>
+
+    <!-- Description -->
+    <text x="44" y="348" class="card-desc">The NFT remains yours and enters the reward-active state.</text>
+  </g>
+</svg>
